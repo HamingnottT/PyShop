@@ -5,3 +5,5 @@ python manage.py runserver
 to end:
 
 Ctrl + C
+
+timestamp 5:21:07
