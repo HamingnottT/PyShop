@@ -1,0 +1,7 @@
+to start the django server:
+
+python manage.py runserver
+
+to end:
+
+Ctrl + C
