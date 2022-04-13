@@ -6,4 +6,30 @@ to end:
 
 Ctrl + C
 
-timestamp 5:21:07
+5:08:00 - Building a django app in browser
+
+python manage.py startapp <app name>
+
+- to functional url links in the app:
+    1. create urls.py
+
+    2. add this boilerplate:
+    from django.urls import path
+    from . import views
+
+    # /products
+    # /products/1/detail
+
+    urlpatterns = [
+        path('', views.index)
+    ]
+    - each time a new path is added:
+    urlpatterns = [
+        path('', views.index),
+        path('New', views.new)      # add a comma, enter and call the path function with the url name and the linked function
+    ]
+
+5:22:00 - Django Models
+Model = representation of a real-world object
+
+5:26:00 - Database in SQLite
