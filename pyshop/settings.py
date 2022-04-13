@@ -20,7 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r*9-$w(hd*gwk)owtbyxyxcqa3@5g^+-1n*$o(m1zu)2vo!snz'
+try:
+    import utilities.security
+except ModuleNotFoundError:
+    print("Module utilities.security not found, but resuming program normally")
+finally:
+    pass
+
+SECRET_KEY = utilities.security.secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
